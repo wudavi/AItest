@@ -52,12 +52,12 @@ showConversationFlag(0或1):是否为vip, 0:标示非VIP；1:表示：VIP。此�
 config : 可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-IOS.jpg "showElva")
 * 参数示例:<br />
-    <pre>ECServiceCocos2dx:: showElva (“elvaTestName”,“12349303258”,1, “es234-3dfs-d42f-342sfe3s3”,”1”,
+    <pre>ECServiceCocos2dx:: showElva ("elvaTestName","12349303258",1, "","1",
       { 
         hs-custom-metadata＝｛
         hs-tags＝'军队，充值' 
         // (说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。)
-        VersionCode＝’3’
+        VersionCode＝'3'
         ｝
       }
     );
