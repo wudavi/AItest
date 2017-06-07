@@ -22,25 +22,25 @@
     </table>
 </div>
 
-# IOS SDK 接入说明 <br />
-# 一、下载IOS SDK <br />
+# IOS SDK 接入说明：<br />
+## 一、下载IOS SDK <br />
 点击上一个页面右上角的“Clone or download”按钮下载IOS SDK，下载完成后解压文件。<br />
-# 二、cocos2dx接口清单 <br />
+## 二、cocos2dx接口清单 <br />
 把interface文件夹下的ECServiceCocos2dx.h、ECServiceCocos2dx.mm放入您的Classes文件夹。<br />
-# 三、导入ElvaChatService <br />
+## 三、导入ElvaChatService <br />
 导入ElvaChatService的文件到项目中<br />      
-# 四、接入工程配置 <br />
+## 四、接入工程配置 <br />
 1、Build Settings里面Other Linker Flags 设置值-ObjC，否则会出现：unrecognized selector sent to instance exception<br/>
-# 五、接口调用说明
-## 1、SDK初始化（必须在游戏开始阶段调用）<br />
+## 五、接口调用说明
+### 1、SDK初始化（必须在游戏开始阶段调用）<br />
 在Cocos2dx中调用：ECServiceCocos2dx::init(string appKey,string domain,string appId)<br />
 * 其中：<br />
 appKey:app密钥，从Web管理系统获取。<br />
 domain:app域名，从Web管理系统获取。<br />
 appId:app唯一标识，从Web管理系统获取。<br />
-注：后面这三个参数，请使用注册时的邮箱地址作为登录名登录 [智能客服后台](https://cs30.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[智能客服官网](http://cs30.net/index.html)自助注册。<br />
+注：后面这三个参数，请使用注册时的邮箱地址作为登录名登录 [Elva AI 后台](https://aihelp.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[Elva AI 官网](http://aihelp.net/index.html)自助注册。<br />
 
-## 2、接口调用方法<br />
+### 2、接口调用方法<br />
 > 1)智能客服主界面启动，调用`showElva`方法，启动机器人界面<br />
 ECServiceCocos2dx:: showElva (string playerName , string playerUid , int serverId,string playerParseId, string showConversationFlag,cocos2d::ValueMap& config);
 * 参数说明:<br />
@@ -65,7 +65,7 @@ config : 可选，自定义ValueMap信息。可以在此处设置特定的Tag信
 > 2)展示单条FAQ，调用`showSingleFAQ`方法<br />
 ECServiceCocos2dx:: showSingleFAQ (string faqId,cocos2d::ValueMap& config);
 * 参数说明：<br />
-faqId：FAQ的PublishID,可以在[智能客服后台](https://cs30.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
+faqId：FAQ的PublishID,可以在[Elva AI 后台](https://aihelp.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
 config : 可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 注：如果在智能客服后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。<br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-IOS.png "showSingleFAQ")
@@ -73,7 +73,7 @@ config : 可选，自定义ValueMap信息。参照 1)智能客服主界面启动
 > 3)展示相关部分FAQ，调用`showFAQSection`方法<br />
 ECServiceCocos2dx:: showFAQSection (string sectionPublishId,cocos2d::ValueMap& config);
 * 参数说明：<br />
-sectionPublishId：FAQ Section的PublishID（可以在[智能客服后台](https://cs30.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）。<br />
+sectionPublishId：FAQ Section的PublishID（可以在[Elva AI 后台](https://aihelp.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）。<br />
 config : 可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-CN-IOS.jpg "showFAQSection")
 > 
