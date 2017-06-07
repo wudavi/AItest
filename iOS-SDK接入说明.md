@@ -1,4 +1,4 @@
-## 重点提醒：<br />
+# 重点提醒：<br />
 1.一定要进行初始化init操作，不然会无法进入Elva AI系统。<br />
 2.iOS10需要获取权限，具体方法参考下面链接 http://blog.csdn.net/u012681458/article/details/51865435 <br />
 3.<div>
