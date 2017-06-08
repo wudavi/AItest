@@ -22,23 +22,17 @@
 </div>
 
 
-Android SDK 接入具体说明
-=====
-一、下载android sdk
-------
+# Android SDK 接入具体说明
+## 一、下载android sdk
   点击上一个页面右上角的“Clone or download”按钮下载Android SDK，下载完成后解压文件。
-二、unity接口文件
-------
+## 二、unity接口文件
   interface下面的ElvaChatServiceSDKAndroid.cs。
-三、elvachatservice导入到项目
-------
+## 三、elvachatservice导入到项目
   把elvachatservice文件夹拷贝到plugins/Android下导入。
   将aarforunity文件夹拷贝到plugins/Android下导入。
-四、Google App Indexing导入到项目
-------
+## 四、Google App Indexing导入到项目
   导入play-services-appindexing到您的项目中(如果项目包含google service appindexing可忽略该步)。
-五、接入工程配置
-------
+## 五、接入工程配置
   在AndroidManifest.xml，增加需要的配置：     
 #### 1、增加需要的权限
     <uses-permission android:name="android.permission.INTERNET" />
@@ -77,7 +71,6 @@ Android SDK 接入具体说明
        android:name="com.google.android.gms.version"
        android:value="@integer/google_play_services_version" />
 六、接口调用说明
-------
 #### 1、sdk初始化
    创建Activity中传递的应用：（必须在游戏开始阶段调用）<br />
 > a.如果是在主Activity的onCreate中调用初始化接口init，则：<br />
