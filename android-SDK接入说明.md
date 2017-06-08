@@ -98,7 +98,7 @@ showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机
 config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-Android.png "showElva")<br />
 > * 参数示例:    
-  <pre>
+<pre>
         ArrayList<String> tags = new ArrayList();
         说明：hs-tags对应的值为ArrayList类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效
         tags.add("pay1");
@@ -109,7 +109,7 @@ config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信�
         HashMap<String,Object> config = new HashMap();
         config.put("hs-custom-metadata",map);
         ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, “”,”1”,config);
- <pre />
+<pre />
 	
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(String faqId,HashMap\<String,Object> config);<br />
