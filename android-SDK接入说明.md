@@ -75,12 +75,11 @@
        android:name="com.google.android.gms.version"
        android:value="@integer/google_play_services_version" />
 ## 六、接口调用说明
-------
 #### 1、sdk初始化
    创建Activity中传递的应用：（必须在游戏开始阶段调用）<br />
 > 在主Activity的onCreate中调用初始化接口init，则：<br />
-    ELvaChatServiceSdk.init(Activity a, final String appSecret, final String domain, final String appId); <br />
-* 其中：<br />
+    ELvaChatServiceSdk.init(Activity a, final String appSecret, final String domain, final String appId); <br />
+> * 其中：<br />
 activity:当前运行的action，传this即可。<br />
 App Key:app密钥，从Web管理系统获取。<br />
 domain:app域名，从Web管理系统获取。<br />
@@ -91,16 +90,16 @@ AppId:app唯一标识，从Web管理系统获取。<br />
 1) 智能客服主界面启动，调用`showElva`方法，启动机器人界面<br />
 ELvaChatServiceSdk.showElvaChatService(String npcName,String userName,String uid,String parseId,String serverId,String showConversationFlag,HashMap\<String,Object> customData); <br />
 > * 参数说明：<br />
-              playerName:游戏中玩家名称。 <br />
-              playerUid:玩家在游戏里的唯一标示id。 <br />
-              serverId:玩家所在的服务器编号。 <br />
-              playerParseId:空。 <br />
-              showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
-              config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
+playerName:游戏中玩家名称。 <br />
+playerUid:玩家在游戏里的唯一标示id。 <br />
+serverId:玩家所在的服务器编号。 <br />
+playerParseId:空。 <br />
+showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
+config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-Android.png "showElva")<br />
-> * 参数示例:    
-
-        ArrayList<String> tags = new ArrayList();
+> * 参数示例:    
+  <pre>
+        ArrayList<String> tags = new ArrayList();
         说明：hs-tags对应的值为ArrayList类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效
         tags.add("pay1");
         tags.add("s1");
@@ -109,7 +108,8 @@ ELvaChatServiceSdk.showElvaChatService(String npcName,String userName,String uid
         map.put("hs-tags",tags);
         HashMap<String,Object> config = new HashMap();
         config.put("hs-custom-metadata",map);
-        ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, “”,”1”,config);
+        ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, “”,”1”,config);
+ <pre />
 	
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(String faqId,HashMap\<String,Object> config);<br />
