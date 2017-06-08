@@ -84,7 +84,7 @@ activity:当前运行的action，传this即可。<br />
 App Key:app密钥，从Web管理系统获取。<br />
 domain:app域名，从Web管理系统获取。<br />
 AppId:app唯一标识，从Web管理系统获取。<br />
-注：后面这三个参数，请登录 [Elva AI 后台](https://aihelp.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[Elva AI 官网](http://aihelp.net/index.html)自助注册。<br />   
+注：后面这三个参数，请使用注册邮箱登录 [Elva AI 后台](https://aihelp.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[Elva AI 官网](http://aihelp.net/index.html)自助注册。<br />   
           
 #### 2、接口调用方法
 1) 智能客服主界面启动，调用`showElva`方法，启动机器人界面<br />
