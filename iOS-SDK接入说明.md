@@ -53,7 +53,6 @@ config : (可选)自定义ValueMap信息。可以在此处设置特定的Tag信�
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-IOS.jpg "showElva")
 
  > * 参数示例:<br />
- 
     <pre>ECServiceCocos2dx:: showElva ("elvaTestName","12349303258",1,"","1",
       { 
         hs-custom-metadata＝｛
