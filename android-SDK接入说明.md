@@ -71,11 +71,10 @@
             >
     </activity>
 #### 3、增加meta    
-<pre>
-   <meta-data
-       android:name="com.google.android.gms.version"
-       android:value="@integer/google_play_services_version" />
-</pre>
+   <pre><meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+   </pre>
 
 ## 六、接口调用说明
 #### 1、sdk初始化
@@ -118,7 +117,7 @@ ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, �
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(String faqId,HashMap\<String,Object> config);<br />
 > * 参数说明：<br />
-faqId:FAQ的PublishID,可以在[智能客服后台](https://cs30.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
+faqId:FAQ的PublishID,可以在[Elva AI 后台](https://aihelp.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-Android.png "showSingleFAQ")<br />
 注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。<br />
