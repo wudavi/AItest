@@ -146,17 +146,17 @@ deviceToken:设备Token。<br />
 * 参数说明:<br />
 playerUid:玩家唯一ID。<br />
 
-8)设置服务器编号信息，调用`setServerId`方法(使用自助服务必须调用，参见 2)展示单条FAQ)<br />
+8) 设置服务器编号信息，调用`setServerId`方法(使用自助服务必须调用，参见 2)展示单条FAQ)<br />
     在showSingleFAQ之前调用：setServerId(string serverId);<br />
 * 参数说明:<br />
 serverId:服务器ID。<br />
 
-9)设置玩家名称信息，调用`setUserName`方法(建议游戏刚进入，调用Init之后就默认调用)<br />
+9) 设置玩家名称信息，调用`setUserName`方法(建议游戏刚进入，调用Init之后就默认调用)<br />
     setUserName(string userName);<br />
 * 参数说明:<br />
 userName:玩家名称。<br />
 
-10)直接进行vip_chat人工客服聊天，调用`showConversation`方法(必须确保9）设置玩家名称信息setUserName 已经调用)<br />
+10) 直接进行vip_chat人工客服聊天，调用`showConversation`方法(必须确保9）设置玩家名称信息setUserName 已经调用)<br />
     showConversation(string uid,string serverId,Dictionary\<string,object> config);<br />
 * 参数说明:<br />
 playerUid:玩家在游戏里的唯一标示id。<br />
