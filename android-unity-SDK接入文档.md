@@ -75,6 +75,7 @@
 
 #### 1、sdk初始化
    创建Activity中传递的应用：（必须在游戏开始阶段调用）<br />
+   <br />
 a.如果是在主Activity的onCreate中调用初始化接口init，则：<br />
     ELvaChatServiceSdk.init(Activity a, final String appSecret, final String domain, final String appId); <br />
 > * 其中：<br />
@@ -96,7 +97,7 @@ ElvaChatServiceSDKAndroid.getInstance().showElva(string playerName,string player
               serverId:玩家所在的服务器编号。 <br />
               playerParseId:空。 <br />
               showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
-              config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
+              config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-Android.png "showElva")<br />
 
 > * 参数示例:   
@@ -105,11 +106,11 @@ ElvaChatServiceSDKAndroid.getInstance().showElva(string playerName,string player
         dic.Add("dic1", "aaa");
         dic.Add("dic2", "bbb");
         List<string> tags = new List<string>();
-        说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
+        //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
         tag.Add("paid");
         tag.Add("server1");
         dic.Add("hs-tags", tags);
-        ElvaChatServiceSDKAndroid.getInstance().showElva(“elvaTestName”,“12349303258”,1, “es234-3dfs-d42f-342sfe3s3”,”1”,dic);
+        ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic);
 > 
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(string faqId,Dictionary\<string,object> config);<br />
