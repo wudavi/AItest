@@ -88,16 +88,16 @@
 ## 七、接口调用说明
 #### 1、sdk初始化
    创建一个在JNI环境和Activity中传递的应用：（必须在游戏开始阶段调用）<br />
-1) 如果是在主Activity的onCreate中调用初始化接口init，则：<br />
+a. 如果是在主Activity的onCreate中调用初始化接口init，则：<br />
     ElvaChatServiceHelper.init(Activity activity,String appKey,String domain,String appId); <br />
 > * 其中：<br />
 activity:当前运行的action，传this即可。<br />
 App Key:app密钥，从Web管理系统获取。<br />
 domain:app域名，从Web管理系统获取。<br />
 AppId:app唯一标识，从Web管理系统获取。<br />
-注：后面这三个参数，请使用注册时的邮箱地址作为登录名登录 [智能客服后台](https://cs30.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[智能客服官网](http://cs30.net/index.html)自助注册。<br />
+注：后面这三个参数，请使用注册邮箱登录 [Elva AI 后台](https://aihelp.net/elva)。在Settings菜单Applications页面查看。初次使用，请先登录[Elva AI 官网](http://aihelp.net/index.html)自助注册。<br />
 
-2) 如果需要延迟调用，则：<br />
+b. 如果需要延迟调用，则：<br />
 在activity.java中调用：ElvaChatServiceHelper.setHostActivity(this)<br />
 在Cocos2dx中调用：ECServiceCocos2dx::init(string appKey,string domain,string appId)<br />   
           
@@ -126,7 +126,7 @@ ECServiceCocos2dx:: showElva (string playerName , string playerUid, int serverId
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     ECServiceCocos2dx:: showSingleFAQ (string faqId,cocos2d::ValueMap& config);<br />
 > * 参数说明：<br />
-faqId:FAQ的PublishID,可以在[智能客服后台](https://cs30.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
+faqId:FAQ的PublishID,可以在[Elva AI 后台](https://aihelp.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-Android.png "showSingleFAQ")<br />
 注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。<br />
@@ -134,7 +134,7 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
 3) 展示相关部分FAQ，调用`showFAQSection`方法<br />
     ECServiceCocos2dx:: showFAQSection (string sectionPublishId,cocos2d::ValueMap& config);<br />
 > * 参数说明：<br />
-sectionPublishId:FAQ Section 的PublishID（可以在[智能客服后台](https://cs30.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
+sectionPublishId:FAQ Section 的PublishID（可以在[Elva AI后台](https://aihelp.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-CN-Android.png "showFAQSection")<br />
 > 
@@ -187,12 +187,13 @@ ECServiceCocos2dx:: showElvaOP (string playerName,string playerUid,int serverId,
               showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
               config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 	      defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
+
 > * 参数示例:   
-     
-    ECServiceCocos2dx:: showElvaOP (“elvaTestName”,“12349303258”,1, “es234-3dfs-d42f-342sfe3s3”,”1”,
+    ECServiceCocos2dx:: showElvaOP ("elvaTestName","12349303258",1, "","1",
      { 
        hs-custom-metadata＝｛
-       hs-tags＝’军队，充值’，说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
+       hs-tags＝'军队，充值",
+       // 说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
        VersionCode＝’3’
        ｝
      }
