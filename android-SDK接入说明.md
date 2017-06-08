@@ -109,7 +109,7 @@ map.put("hs-tags",tags);
 HashMap<String,Object> config = new HashMap();
 config.put("hs-custom-metadata",map);
 ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, “”,”1”,config);
-   < /pre>
+   
 	
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(String faqId,HashMap\<String,Object> config);<br />
