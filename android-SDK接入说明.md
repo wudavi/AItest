@@ -122,14 +122,14 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
 3) 展示相关部分FAQ，调用`showFAQSection`方法<br />
     showFAQSection(String sectionPublishId,HashMap\<String,Object> config);<br />
 > * 参数说明：<br />
-sectionPublishId:FAQ Section 的PublishID（可以在[智能客服后台](https://cs30.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
+sectionPublishId:FAQ Section 的PublishID（可以在[Elva AI 后台](https://aihelp.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-CN-Android.png "showFAQSection")<br />
 > 
 4) 展示FAQ列表，调用`showFAQs`方法<br />
     showFAQList(HashMap\<String,Object> config)<br />
 > * 参数说明：<br />
-config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
+config:可选，自定义ValueMap信息。参照 1)Elva AI 主界面启动。<br />
 ![showFAQs](https://github.com/CS30-NET/Pictures/blob/master/showFAQs-CN-Android.png "showFAQs")<br />
 > 
 5) 设置游戏名称信息，调用`setName`方法(建议游戏刚进入，调用Init之后就默认调用)<br />
@@ -162,7 +162,7 @@ userName:玩家名称。<br />
 > * 参数说明:<br />
 playerUid:玩家在游戏里的唯一标示id。<br />
 serverId:玩家所在的服务器编号。<br />
-config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
+config:可选，自定义ValueMap信息。参照 1)Elva AI 主界面启动。<br />
 ![showConversation](https://github.com/CS30-NET/Pictures/blob/master/showConversation-CN-Android.png "showConversation")
  > 
  11) 智能客服运营模块主界面启动，调用`showElvaOP`方法，启动运营模块界面<br />
