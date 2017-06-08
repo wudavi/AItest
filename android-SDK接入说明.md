@@ -22,18 +22,18 @@
 </div>
 
 
-Android SDK 接入具体说明
-=====
-一、下载android sdk
+# Android SDK 接入具体说明
+------
+## 一、下载android sdk
 ------
   点击上一个页面右上角的“Clone or download”按钮下载Android SDK，下载完成后解压文件。
-二、elvachatservice导入到项目
+## 二、elvachatservice导入到项目
 ------
   把elvachatservice文件夹拷贝到项目下导入。
-三、Google App Indexing导入到项目
+## 三、Google App Indexing导入到项目
 ------
   导入play-services-appindexing到您的项目中(如果项目包含google service appindexing可忽略该步)。
-四、Android Appcompact相关包导入到项目	
+## 四、Android Appcompact相关包导入到项目	
 ------
 导入android_libs下Android Appcompact到您的项目中(如果项目包含已全部包含活或部分包括，请不要重复导入，只需要导入项目中未包含的)。
 如果您使用Gradle：
@@ -41,8 +41,8 @@ Android SDK 接入具体说明
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
-五、接入工程配置
+    compile 'com.android.support:cardview-v7:23.4.0'
+## 五、接入工程配置
 ------
   在AndroidManifest.xml，增加需要的配置：     
 #### 1、增加需要的权限
