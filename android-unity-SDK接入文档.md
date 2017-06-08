@@ -131,7 +131,7 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
     showFAQList(Dictionary<string,object> config)<br />
 > * 参数说明：<br />
     showFAQList(Dictionary<string,object> config)<br />
-config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
+config:(可选)自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQs](https://github.com/CS30-NET/Pictures/blob/master/showFAQs-CN-Android.png "showFAQs")<br />
 
 5) 设置游戏名称信息，调用`setName`方法(建议游戏刚进入，调用Init之后就默认调用)<br />
@@ -167,7 +167,7 @@ serverId:玩家所在的服务器编号。<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showConversation](https://github.com/CS30-NET/Pictures/blob/master/showConversation-CN-Android.png "showConversation")
 
-11) 智能客服运营模块主界面启动，调用`showElvaOP`方法，启动运营模块界面<br />
+11) Elva AI 运营模块主界面启动，调用`showElvaOP`方法，启动运营模块界面<br />
 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary\<string,object> config, int defaultTabIndex);
 <br />
 > * 参数说明：<br />
