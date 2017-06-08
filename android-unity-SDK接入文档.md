@@ -179,16 +179,15 @@ showElvaOP(string playerName, string playerUid, string serverId, string playerPa
               defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
               
 > * 参数示例:   
-
         Dictionary<string, object> dic = new Dictionary<string, object>();
         dic.Add("dic1", "aaa");
         dic.Add("dic2", "bbb");
         List<string> tags = new List<string>();
-        说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
+        //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
         tag.Add("paid");
         tag.Add("server1");
         dic.Add("hs-tags", tags);
-        ElvaChatServiceSDKAndroid.getInstance().showElvaOP(“elvaTestName”,“12349303258”,1, “es234-3dfs-d42f-342sfe3s3”,”1”,dic);
+        ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);
 > 
 12) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
 setSDKLanguage (String language);<br />
