@@ -188,16 +188,16 @@ ECServiceCocos2dx:: showElvaOP (string playerName,string playerUid,int serverId,
               config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 	      defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
 
-> * 参数示例:   
-    ECServiceCocos2dx:: showElvaOP ("elvaTestName","12349303258",1, "","1",
-     { 
-       hs-custom-metadata＝｛
-       hs-tags＝'军队，充值",
-       // 说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
-       VersionCode＝’3’
-       ｝
-     }
-    );
+> * 参数示例:  <br /> 
+    ECServiceCocos2dx:: showElvaOP ("elvaTestName","12349303258",1, "","1",<br /> 
+     { <br /> 
+       hs-custom-metadata＝｛<br /> 
+       hs-tags＝'军队，充值",<br /> 
+       // 说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。<br /> 
+       VersionCode＝’3’<br /> 
+       ｝<br /> 
+     }<br /> 
+    );<br /> 
 
 12) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
 ECServiceCocos2dx:: setSDKLanguage (String language);<br />
