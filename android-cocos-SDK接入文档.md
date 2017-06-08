@@ -192,8 +192,8 @@ ECServiceCocos2dx:: showElvaOP (string playerName,string playerUid,int serverId,
     ECServiceCocos2dx:: showElvaOP ("elvaTestName","12349303258",1, "","1",<br /> 
      { <br /> 
        hs-custom-metadata＝｛<br /> 
-       hs-tags＝'军队，充值",<br /> 
-       // 说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。<br /> 
+     hs-tags＝'军队，充值",<br /> 
+     // 说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。<br /> 
        VersionCode＝’3’<br /> 
        ｝<br /> 
      }<br /> 
