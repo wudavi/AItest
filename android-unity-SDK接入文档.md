@@ -114,7 +114,7 @@ ElvaChatServiceSDKAndroid.getInstance().showElva(string playerName,string player
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(string faqId,Dictionary\<string,object> config);<br />
 > * 参数说明：<br />
-faqId:FAQ的PublishID,可以在[智能客服后台](https://cs30.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
+faqId:FAQ的PublishID,可以在[Elva AI 后台](https://aihelp.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-Android.png "showSingleFAQ")<br />
 注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。<br />
@@ -122,7 +122,7 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
 3) 展示相关部分FAQ，调用`showFAQSection`方法<br />
     showFAQSection(string sectionPublishId,Dictionary\<string,object> config);<br />
 > * 参数说明：<br />
-sectionPublishId:FAQ Section 的PublishID（可以在[智能客服后台](https://cs30.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
+sectionPublishId:FAQ Section 的PublishID（可以在[Elva AI 后台](https://aihelp.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-CN-Android.png "showFAQSection")<br />
 
