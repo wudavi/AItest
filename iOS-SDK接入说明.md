@@ -44,6 +44,7 @@ appId:app唯一标识，从Web管理系统获取。<br />
 1) 智能客服主界面启动，调用`showElva`方法，启动机器人界面<br />
 ECServiceCocos2dx:: showElva (string playerName , string playerUid , int serverId,string playerParseId, string showConversationFlag,cocos2d::ValueMap& config);
 > 参数说明:<br />
+
 playerName: 游戏中玩家名称。<br />
 playerUid:玩家在游戏里的唯一标示id。<br />
 serverId:玩家所在的服务器编号。<br />
