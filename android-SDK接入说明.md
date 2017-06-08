@@ -175,8 +175,10 @@ showElvaOP(String npcName,String userName,String uid,String parseId,String serve
               showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
               config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 	      defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
-> * 参数示例:       
-        ArrayList<String> tags = new ArrayList();
+	      
+> * 参数示例:       
+        <pre>
+ArrayList<String> tags = new ArrayList();
         说明：hs-tags对应的值为ArrayList类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效
         tags.add("pay1");
         tags.add("s1");
@@ -186,7 +188,8 @@ showElvaOP(String npcName,String userName,String uid,String parseId,String serve
         HashMap<String,Object> config = new HashMap();
         config.put("hs-custom-metadata",map);
         ELvaChatServiceSdk.showElvaOP(“elvaTestName”,“12349303258”,1, “”,”1”,config,0);
-> 
+
+
 12) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
     setSDKLanguage(String language);<br />
 > * 参数说明:<br />
