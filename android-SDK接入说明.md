@@ -98,8 +98,8 @@ ELvaChatServiceSdk.showElvaChatService(String npcName,String userName,String uid
               showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
               config:可选，自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-Android.png "showElva")<br />
-> * 参数示例:   
-    
+> * 参数示例:    
+
         ArrayList<String> tags = new ArrayList();
         说明：hs-tags对应的值为ArrayList类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效
         tags.add("pay1");
@@ -110,34 +110,35 @@ ELvaChatServiceSdk.showElvaChatService(String npcName,String userName,String uid
         HashMap<String,Object> config = new HashMap();
         config.put("hs-custom-metadata",map);
         ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, “”,”1”,config);
-> 
-> 2)展示单条FAQ，调用`showSingleFAQ`方法<br />
-    showSingleFAQ(String faqId,HashMap\<String,Object> config);<br />
-* 参数说明：<br />
+	
+2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
+    showSingleFAQ(String faqId,HashMap\<String,Object> config);<br />
+> * 参数说明：<br />
 faqId:FAQ的PublishID,可以在[智能客服后台](https://cs30.net/elva)中，从FAQs菜单下找到指定FAQ，查看PublishID。<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-Android.png "showSingleFAQ")<br />
 注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。<br />
 > 
-> 3)展示相关部分FAQ，调用`showFAQSection`方法<br />
-    showFAQSection(String sectionPublishId,HashMap\<String,Object> config);<br />
-* 参数说明：<br />
+
+3) 展示相关部分FAQ，调用`showFAQSection`方法<br />
+    showFAQSection(String sectionPublishId,HashMap\<String,Object> config);<br />
+> * 参数说明：<br />
 sectionPublishId:FAQ Section 的PublishID（可以在[智能客服后台](https://cs30.net/elva) 中，从FAQs菜单下[Section]菜单，查看PublishID）<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-CN-Android.png "showFAQSection")<br />
 > 
-> 4)展示FAQ列表，调用`showFAQs`方法<br />
-    showFAQList(HashMap\<String,Object> config)<br />
-* 参数说明：<br />
+4) 展示FAQ列表，调用`showFAQs`方法<br />
+    showFAQList(HashMap\<String,Object> config)<br />
+> * 参数说明：<br />
 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。<br />
 ![showFAQs](https://github.com/CS30-NET/Pictures/blob/master/showFAQs-CN-Android.png "showFAQs")<br />
 > 
-> 5)设置游戏名称信息，调用`setName`方法(建议游戏刚进入，调用Init之后就默认调用)<br />
-    setName(String gameName);<br />
-* 参数说明:<br />
+5) 设置游戏名称信息，调用`setName`方法(建议游戏刚进入，调用Init之后就默认调用)<br />
+    setName(String gameName);<br />
+> * 参数说明:<br />
 gameName:游戏名称，设置后将显示在SDK中相关界面标题栏。<br />
 > 
-> 6)设置Token，使用google推送，调用`registerDeviceToken`方法（暂无）<br />
+6) 设置Token，使用google推送，调用`registerDeviceToken`方法（暂无）<br />
     暂无;<br />
 * 参数说明:<br />
 deviceToken:设备Token。<br />
