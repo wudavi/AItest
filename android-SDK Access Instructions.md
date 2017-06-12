@@ -97,7 +97,6 @@ config: Optional, custom ValueMap information. You can set specific Tag informat
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-EN-Android.png "showElva")<br />
 
 > * Parameter Example:    
-
     ECServiceCocos2dx :: showElva ( "elvaTestName", "12349303258", 1, "es234-3dfs-d42f-342sfe3s3", "1"
      {
        Hs-custom-metadata = {
