@@ -21,24 +21,23 @@
     </table>
 </div>
   
-  
-Android SDK Access Instructions
-=====
-Ⅰ. Download Android SDK.
-------
+  
+# Android SDK Access Instructions
+
+## Ⅰ. Download Android SDK.
 Click the button "Clone or download" in the top right corner to download Android SDK and then unzip the file.
-Ⅱ. cocos2dx Interface List
-------
+
+## Ⅱ. cocos2dx Interface List
 Put ECServiceCocos2dx.h, ECServiceCocos2dx.cpp in the interface folder in your Classes folder.
-Ⅲ. Import elvachatservice into project
-------
+## Ⅲ. Import elvachatservice into project
 Copy the elvachatservice folder to your main directory
-Ⅳ. Import Google App Indexing into project
-------
+
+## Ⅳ. Import Google App Indexing into project
 Import play-services-appindexing into your project(IF the item google service appindexing exists, this step can be ignored).
-Ⅴ. Access Project Configuration
-------
+
+## Ⅴ. Access Project Configuration
 Modify the AndroidManifest.xml in elvachatservice folder to add the required configuration:
+
 ### 1. Add the required permissions:
     <Uses-permission android: name = "android.permission.INTERNET" />
     <Uses-permission android: name = "android.permission.ACCESS_NETWORK_STATE" />
