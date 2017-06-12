@@ -155,6 +155,7 @@ playerName: The player name.<br />
 10) Direct vip_chat artificial customer service chat, call `showConversation` method (must ensure that setUserName in 9) set the
       player name information has been called)<br />
 ECServiceCocos2dx :: showConversation (string playerUid, int serverId, cocos2d :: ValueMap & config);<br />
+
 > * Parameter Description:<br />
 playerUid: The player's unique id in the game.<br />
 serverId: The server ID of the player.<br />
@@ -163,6 +164,7 @@ config: Optional, custom ValueMap information. Refer to 1) intelligent customer 
 11) Operation Module UI. call `showElvaOP` method to start the operation module ui.<br />
 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary\<string,object> config, int defaultTabIndex);
 <br />
+
 > * Parameter Description:<br />
               playerName:The player name. <br />
               playerUid:The player's unique id in the game. <br />
