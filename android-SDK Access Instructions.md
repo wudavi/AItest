@@ -186,8 +186,7 @@ tags.add("pay1");<br />
         map.put("hs-tags",tags);<br />
         HashMap<String,Object> config = new HashMap();<br />
         config.put("hs-custom-metadata",map);<br />
-ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br />
-   <pre />
+ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
  
 12) Set the SDK language，call `setSDKLanguage` method(Elva use the language of the phone by default.Call this method if after init ,and after the language of App has changed if nessary.)<br />
 setSDKLanguage (String language);<br />
