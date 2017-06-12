@@ -70,7 +70,8 @@ Modify the AndroidManifest.xml in elvachatservice folder to add the required con
 ## Ⅵ.Interface Call Instructions
 ### 1. SDK initialization. <br />
 Create a JNI environment and the application in the Activity: (must be called at the beginning of the game)<br />
-a.If you call initialization interface in onCreate of the main Activity. then call:<br />
+<br />
+a) If you call initialization interface in onCreate of the main Activity. then call:<br />
 ElvaChatServiceHelper.init (Activity activity, String appKey, String domain, String appId)<br />
 > * Parameter Description:<br />
 activity: the current operation of the action, parameter "this" can be. <br />
@@ -79,7 +80,7 @@ domain: app Domain name, obtained from the Web management system.<br />
 appId: app Unique identifier, obtained from the Web management system.<br />
 Note: The latter three parameters, please use the registered email address to login https://aihelp.net/elva. View in the Settings Applications page. Initial use, please register on the official website http://aihelp.net/preview/index.html.
 > 
-b. If you need to delay the call, then，<br />
+b) If you need to delay the call, then，<br />
 In activity.java call SetActivity (this);<br />
 In Cocos2dx call ECServiceCocos2dx :: init (string appKey, string domain, string appId);<br />
 
@@ -94,7 +95,8 @@ playerParseId: Null.<br />
 showConversationFlag (0 or 1): whether VIP, 0: marked non-VIP; 1: VIP. Here is 1, will be in the upper right corner of the robot chat interface, to provide artificial chat entry function.<br />
 config: Optional, custom ValueMap information. You can set specific Tag information here.<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-EN-Android.png "showElva")<br />
-> Parameter Example:    
+
+> * Parameter Example:    
 
     ECServiceCocos2dx :: showElva ( "elvaTestName", "12349303258", 1, "es234-3dfs-d42f-342sfe3s3", "1"
      {
@@ -173,6 +175,7 @@ showElvaOP(string playerName, string playerUid, string serverId, string playerPa
               showConversationFlag (0 or 1): whether VIP, 0: marked non-VIP; 1: VIP. Here is 1, will be in the upper right corner of the robot chat interface, to provide artificial chat entry function.<br />
 config: Optional, custom ValueMap information. You can set specific Tag information here.<br />
               defaultTabIndex:Optional，Set the default tab index.（start with 0，if you want to set Elva tab as default，just set it to 999）.<br />	
+<br />
 > * Parameter Example:      
 
         ArrayList<String> tags = new ArrayList();
