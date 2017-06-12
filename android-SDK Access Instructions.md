@@ -66,9 +66,10 @@ Modify the AndroidManifest.xml in elvachatservice folder to add the required con
       <meta-data
           android:name="com.google.android.gms.version"
           android:value="@integer/google_play_services_version" />
-Ⅵ.Interface Call Instructions
+
+## Ⅵ.Interface Call Instructions
 ------
-#### 1. SDK initialization. <br />
+### 1. SDK initialization. <br />
 Create a JNI environment and the application in the Activity: (must be called at the beginning of the game)<br />
 > a.If you call initialization interface in onCreate of the main Activity. then call:<br />
 ElvaChatServiceHelper.init (Activity activity, String appKey, String domain, String appId)<br />
@@ -77,13 +78,13 @@ activity: the current operation of the action, parameter "this" can be. <br />
 app Key: The app key, obtained from the Web management system.<br />
 domain: app Domain name, obtained from the Web management system.<br />
 appId: app Unique identifier, obtained from the Web management system.<br />
-Note: The latter three parameters, please use the registered email address to login https://cs30.net/elva. View in the Settings Applications page. Initial use, please register on the official website http://cs30.net/preview/index.html.
+Note: The latter three parameters, please use the registered email address to login https://aihelp.net/elva. View in the Settings Applications page. Initial use, please register on the official website http://aihelp.net/preview/index.html.
 > 
 > b. If you need to delay the call, then，<br />
 In activity.java call SetActivity (this);<br />
 In Cocos2dx call ECServiceCocos2dx :: init (string appKey, string domain, string appId);<br />
 
-#### 2. The interface call method<br />
+### 2. The interface call method<br />
 > 1) Start smart customer service main interface, call `showElva` method, start the robot interface.<br />
 ECServiceCocos2dx :: showElva (string playerName, string playerUid, int serverId, string playerParseId, string showConversationFlag, cocos2d :: ValueMap & config);<br />
 * Parameter Description:<br />
@@ -109,7 +110,7 @@ config: Optional, custom ValueMap information. You can set specific Tag informat
 > 2) Show a single FAQ, call `showSingleFAQ` method<br />
 ECServiceCocos2dx :: showSingleFAQ (string faqId, cocos2d :: ValueMap & config);<br />
 * Parameter Description:<br />
-faqId: FAQ's PublishID, in the Web background https://cs30.net/elva, from the FAQs menu to find the specified FAQ, view PublishID.<br />
+faqId: FAQ's PublishID, in the Web background https://aihelp.net/elva, from the FAQs menu to find the specified FAQ, view PublishID.<br />
 config: Optional, custom ValueMap information. Refer to 1) intelligent customer service main interface starts.<br />
 Note: If the SelfServiceInterface is configured in the web administration background, and the SDK is configured with related parameters, the FAQ will be displayed and the function menu will be provided in the upper right corner to call up the related self-service.<br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-EN-Android.png "showSingleFAQ")<br />
@@ -117,7 +118,7 @@ Note: If the SelfServiceInterface is configured in the web administration backgr
 > 3) Show the relevant part of the FAQ, call `showFAQSection` method<br />
 ECServiceCocos2dx :: showFAQSection (string sectionPublishId, cocos2d :: ValueMap & config);<br />
 * Parameter Description:<br />
-sectionPublishId: PublishID of the FAQ Section (PublishID can be viewed from the [Section] menu in the FAQs menu at https://cs30.net/elva).<br />
+sectionPublishId: PublishID of the FAQ Section (PublishID can be viewed from the [Section] menu in the FAQs menu at https://aihelp.net/elva).<br />
 config: Optional, custom ValueMap information. Refer to 1) intelligent customer service main interface starts.
 ![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-EN-Android.png "showFAQSection")<br />
 > 
@@ -182,10 +183,10 @@ config: Optional, custom ValueMap information. You can set specific Tag informat
         map.put("hs-tags",tags);
         HashMap<String,Object> config = new HashMap();
         config.put("hs-custom-metadata",map);
-        ELvaChatServiceSdk.showElvaOP(“elvaTestName”,“12349303258”,1, “”,”1”,config,0);
+        ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 > 
 > 12)Set the SDK language，call `setSDKLanguage` method(Elva use the language of the phone by default.Call this method if after init ,and after the language of App has changed if nessary.)<br />
 setSDKLanguage (String language);<br />
 * Parameter Description:<br />
-language:language alias,eg:en for english,zh_CN for simplified Chinese。For more alias ,see alias in Elva page "settings"-->"language"。<br />
+language:language alias,eg:en for english,zh_CN for simplified Chinese.For more alias ,see alias in Elva page "settings"-->"language".<br />
 > 
