@@ -178,7 +178,7 @@ config: Optional, custom ValueMap information. You can set specific Tag informat
 
 > * Parameter Example:      
    <pre>ArrayList<String> tags = new ArrayList();<br />
-//Description: the hs - tags corresponding value is an ArrayList, incoming custom Tag here, need in the Web management       configuration with the name of the Tag.<br />
+//Description: the hs - tags corresponding value is an ArrayList, incoming custom Tag here, need in the Web management configuration with the name of the Tag.<br />
 tags.add("pay1");<br />
         tags.add("s1");<br />
         tags.add("elvaTestTag");<br />
