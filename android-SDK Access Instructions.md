@@ -96,16 +96,16 @@ showConversationFlag (0 or 1): whether VIP, 0: marked non-VIP; 1: VIP. Here is 1
 config: Optional, custom ValueMap information. You can set specific Tag information here.<br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-EN-Android.png "showElva")<br />
 
-> * Parameter Example:    
-    ECServiceCocos2dx :: showElva ( "elvaTestName", "12349303258", 1, "es234-3dfs-d42f-342sfe3s3", "1"
-     {
-       Hs-custom-metadata = {
-       Hs-tags = 'army, recharge'. //Note: hs-tags value is vector type, where the incoming custom Tag,   
-       need to configure the same name in the Web management Tag to take effect.
-       VersionCode = '3'
-       } 
-     }
-    );
+> * Parameter Example:    <br />
+    ECServiceCocos2dx :: showElva ( "elvaTestName", "12349303258", 1, "es234-3dfs-d42f-342sfe3s3", "1"<br />
+     {<br />
+       Hs-custom-metadata = {<br />
+       Hs-tags = 'army, recharge'. //Note: hs-tags value is vector type, where the incoming custom Tag,   <br />
+       need to configure the same name in the Web management Tag to take effect.<br />
+       VersionCode = '3'<br />
+       } <br />
+     }<br />
+    );<br />
 > 
 2) Show a single FAQ, call `showSingleFAQ` method<br />
 ECServiceCocos2dx :: showSingleFAQ (string faqId, cocos2d :: ValueMap & config);<br />
