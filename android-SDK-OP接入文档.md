@@ -111,7 +111,7 @@ HashMap<String,Object> map = new HashMap();
 map.put("hs-tags",tags);
 HashMap<String,Object> config = new HashMap();
 config.put("hs-custom-metadata",map);
-ELvaChatServiceSdk.showElvaChatService(“elvaTestName”,“12349303258”,1, “”,”1”,config);
+ELvaChatServiceSdk.showElvaChatService("elvaTestName","12349303258",1, "","1",config);
    
 	
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
@@ -194,7 +194,7 @@ ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 
 
 12）从不同入口进入不同故事线功能。
-
+通过map.put("anotherWelcomeText","heroText");来启用不同入口进入不同故事线功能。
 > * 参数示例: 
         <pre>
   ArrayList<String> tags = new ArrayList();
@@ -203,11 +203,11 @@ ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
         tags.add("elvaTestTag");
 	HashMap<String,Object> map = new HashMap();
         map.put("hs-tags",tags);
-        //调用不同故事线功能，使用指定的提示语句
-        map.put("anotherWelcomeText","heroText");
-        //其它数据
+        //调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。注：heroText提示语句，需要和故事线中的User Say想对应。
+        map.put("anotherWelcomeText","heroText");
         HashMap config = new HashMap();
         config.put("hs-custom-metadata",map);
+	
 
 13) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
     setSDKLanguage(String language);<br />
