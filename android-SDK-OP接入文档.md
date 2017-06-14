@@ -197,15 +197,14 @@ ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 
 > * 参数示例: 
         <pre>
-  HashMap<String,Object> map = new HashMap();
-        ArrayList<String> tags = new ArrayList();
+  ArrayList<String> tags = new ArrayList();
         tags.add("pay1");
         tags.add("s1");
         tags.add("elvaTestTag");
+	HashMap<String,Object> map = new HashMap();
         map.put("hs-tags",tags);
-        //模拟从建筑进入，使用指定的提示语句
+        //调用不同故事线功能，使用指定的提示语句
         map.put("anotherWelcomeText","heroText");
-        map.put("sdk_version", Constants.SDK_VERSION);
         //其它数据
         HashMap config = new HashMap();
         config.put("hs-custom-metadata",map);
