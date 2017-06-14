@@ -206,8 +206,8 @@ ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 //调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。
 //注：heroText提示语句，需要和故事线中的User Say相对应。
 map.put("anotherWelcomeText","heroText");
-        HashMap config = new HashMap();
-        config.put("hs-custom-metadata",map);
+HashMap config = new HashMap();
+config.put("hs-custom-metadata",map);
 //如果是在智能客服主界面中
 ELvaChatServiceSdk.showElvaChatService("elvaTestName","12349303258",1, "","1",config);
 //如果是在智能客服运营主界面中
