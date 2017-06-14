@@ -193,16 +193,16 @@ ArrayList<String> tags = new ArrayList();
 ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 
 
-12）不用入口进不同故事线，实现从不同入口进入，有不同欢迎语，不同故事线的功能。
+12）从不同入口进入不同故事线功能。
 
 > * 参数示例: 
+        <pre>
   HashMap<String,Object> map = new HashMap();
         ArrayList<String> tags = new ArrayList();
         tags.add("pay1");
         tags.add("s1");
         tags.add("elvaTestTag");
         map.put("hs-tags",tags);
-
         //模拟从建筑进入，使用指定的提示语句
         map.put("anotherWelcomeText","heroText");
         map.put("sdk_version", Constants.SDK_VERSION);
