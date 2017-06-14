@@ -193,7 +193,24 @@ ArrayList<String> tags = new ArrayList();
 ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 
 
-12) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
+12）不用入口进不同故事线，实现从不同入口进入，有不同欢迎语，不同故事线的功能。
+
+> * 参数示例: 
+  HashMap<String,Object> map = new HashMap();
+        ArrayList<String> tags = new ArrayList();
+        tags.add("pay1");
+        tags.add("s1");
+        tags.add("elvaTestTag");
+        map.put("hs-tags",tags);
+
+        //模拟从建筑进入，使用指定的提示语句
+        map.put("anotherWelcomeText","heroText");
+        map.put("sdk_version", Constants.SDK_VERSION);
+        //其它数据
+        HashMap config = new HashMap();
+        config.put("hs-custom-metadata",map);
+
+13) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
     setSDKLanguage(String language);<br />
 > * 参数说明:<br />
 language:语言名称。如英语为en,简体中文为zh_CN。更多语言简称参见Elva后台，"设置"-->"语言"的Alias列。<br />
