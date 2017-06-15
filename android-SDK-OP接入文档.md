@@ -22,13 +22,15 @@
 </div>
 
 # Android SDK 接入具体说明
-## 一、下载android sdk
+## 一、接入Elva SDK有两种方式，第一种是下载后导入，第二种是从jcenter引入。
+### 第一种方式：
+### 1、 下载android sdk
   点击上一个页面右上角的“Clone or download”按钮下载Android SDK，下载完成后解压文件。
-## 二、elvachatservice导入到项目
+### 2、elvachatservice导入到项目
   把elvachatservice文件夹拷贝到项目下导入。
-## 三、Google App Indexing导入到项目
+### 3、Google App Indexing导入到项目
   导入play-services-appindexing到您的项目中(如果项目包含google service appindexing可忽略该步)。
-## 四、Android Appcompact相关包导入到项目	
+### 4、Android Appcompact相关包导入到项目	
 导入android_libs下Android Appcompact到您的项目中(如果项目已经包含该包，全部包含或者部分包含，请不要重复导入，只需要导入项目中未包含的)。
 如果您使用Gradle：<br />
   修改build.gradle,增加以下部分。根据需要，可以修改相关版本：<br />
@@ -36,7 +38,43 @@
     compile 'com.android.support:design:23.4.0' <br />
     compile 'com.android.support:recyclerview-v7:23.4.0' <br />
     compile 'com.android.support:cardview-v7:23.4.0' <br />
-## 五、接入工程配置
+
+### 第二种方式：
+ 只适用基于Android Studio或其他Gradle based projects 的用户，可以无需下载Elva，直接修改配置增加Elva的引入。
+ 
+ ### 1.在Project级别build.gradle中加入：
+allprojects {
+        repositories {
+            jcenter()
+        }
+
+### 2.在使用Elva的Module级别build.gradle中加入：
+dependencies {
+    compile 'net.aihelp:elva:1.0.0'
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+}
+ > * 参数说明：
+dependencies {
+
+  //Elva主包,必需
+    compile 'net.aihelp:elva:1.0.0'
+  //Elva通信包,必需
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'
+  //使用Google AppIndexing 时需要加上
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+  //以下为使用运营模块 时需要加上
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+
+ 
+ 
+## 二、接入工程配置
   在AndroidManifest.xml，增加需要的配置：     
 #### 1、增加需要的权限
     <uses-permission android:name="android.permission.INTERNET" />
