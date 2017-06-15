@@ -33,14 +33,14 @@
 ### 4、Android Appcompact相关包导入到项目	
 导入android_libs下Android Appcompact到您的项目中(如果项目已经包含该包，全部包含或者部分包含，请不要重复导入，只需要导入项目中未包含的)。
 如果您使用Gradle：<br />
-  修改build.gradle,增加以下部分。根据需要，可以修改相关版本：<br />
+> 修改build.gradle,增加以下部分。根据需要，可以修改相关版本：<br />
     compile 'com.android.support:appcompat-v7:23.4.0' <br />
     compile 'com.android.support:design:23.4.0' <br />
     compile 'com.android.support:recyclerview-v7:23.4.0' <br />
     compile 'com.android.support:cardview-v7:23.4.0' <br />
 
 ### 第二种方式：
- 只适用基于Android Studio或其他Gradle based projects 的用户，可以无需下载Elva，直接修改配置增加Elva的引入。
+* 只适用基于Android Studio或其他Gradle based projects 的用户，可以无需下载Elva，直接修改配置增加Elva的引入。
  
  ### 1.在Project级别build.gradle中加入：
 allprojects {
@@ -49,28 +49,27 @@ allprojects {
         }
 
 ### 2.在使用Elva的Module级别build.gradle中加入：
-dependencies {
-    compile 'net.aihelp:elva:1.0.0'
-    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
-}
+dependencies {  <br />
+    compile 'net.aihelp:elva:1.0.0'  <br />
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'  <br />
+    compile 'com.android.support:appcompat-v7:23.4.0'  <br />
+    compile 'com.android.support:design:23.4.0'  <br />
+    compile 'com.android.support:recyclerview-v7:23.4.0'  <br />
+    compile 'com.android.support:cardview-v7:23.4.0'  <br />
+}  <br />
  > * 参数说明：
-dependencies {
-
-  //Elva主包,必需
-    compile 'net.aihelp:elva:1.0.0'
-  //Elva通信包,必需
-    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'
-  //使用Google AppIndexing 时需要加上
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
-  //以下为使用运营模块 时需要加上
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
+dependencies {  <br />
+  //Elva主包,必需  <br />
+    compile 'net.aihelp:elva:1.0.0'  <br />
+  //Elva通信包,必需  <br />
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'  <br />
+  //使用Google AppIndexing 时需要加上  <br />
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'  <br />
+  //以下为使用运营模块 时需要加上  <br />
+    compile 'com.android.support:appcompat-v7:23.4.0'  <br />
+    compile 'com.android.support:design:23.4.0'  <br />
+    compile 'com.android.support:recyclerview-v7:23.4.0'  <br />
+    compile 'com.android.support:cardview-v7:23.4.0'  <br />
 
  
  
