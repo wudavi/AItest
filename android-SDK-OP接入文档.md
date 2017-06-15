@@ -114,7 +114,7 @@ dependencies {  <br />
         android:value="@integer/google_play_services_version" />
    </pre>
 
-## 六、接口调用说明
+## 三、接口调用说明
 #### 1、sdk初始化
    创建Activity中传递的应用：（必须在游戏开始阶段调用）<br />
 > 在主Activity的onCreate中调用初始化接口init，则：<br />
