@@ -40,7 +40,7 @@
     compile 'com.android.support:cardview-v7:23.4.0' <br />
 
 ### 第二种方式：
-* 只适用基于Android Studio或其他Gradle based projects 的用户，可以无需下载Elva，直接修改配置增加Elva的引入。
+注：只适用基于Android Studio或其他Gradle based projects 的用户，可以无需下载Elva，直接修改配置增加Elva的引入。
  
  ### 1.在Project级别build.gradle中加入：
 allprojects {
