@@ -37,14 +37,14 @@ Import play-services-appindexing into your project(IF the item google service ap
 
 ## another way
 Note: only available on Android Studio or other Gradle -based projects, can be directly modify configuration to increase the introduction of Elva SDK.
- ### Ⅰ.在Project级别build.gradle中加入：
+ ### Ⅰ. Add the following *allprojects* to your *build.gradle* file inside the project section.
 allprojects {
         repositories {
             jcenter()
         }
 
-### Ⅱ.在使用Elva的Module级别build.gradle中加入：
-> dependencies {  <br />
+### Ⅱ.add the following dependencies to your *build.gradle* file inside the depencencies section.
+> dependencies {  <br />
     compile 'net.aihelp:elva:1.0.0'  <br />
     compile 'org.fusesource.mqtt-client:mqtt-client:1.12'  <br />
     compile 'com.android.support:appcompat-v7:23.4.0'  <br />
@@ -52,20 +52,6 @@ allprojects {
     compile 'com.android.support:recyclerview-v7:23.4.0'  <br />
     compile 'com.android.support:cardview-v7:23.4.0'  <br />
 }  <br />
-
- > * 参数说明：  <br />
-dependencies {  <br />
-  //Elva主包,必需  <br />
-    compile 'net.aihelp:elva:1.0.0'  <br />
-  //Elva通信包,必需  <br />
-    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'  <br />
-  //使用Google AppIndexing 时需要加上  <br />
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'  <br />
-  //以下为使用运营模块 时需要加上  <br />
-    compile 'com.android.support:appcompat-v7:23.4.0'  <br />
-    compile 'com.android.support:design:23.4.0'  <br />
-    compile 'com.android.support:recyclerview-v7:23.4.0'  <br />
-    compile 'com.android.support:cardview-v7:23.4.0'  <br />
 
 
 ## 2. Access Project Configuration
@@ -219,6 +205,27 @@ tags.add("pay1");<br />
         HashMap<String,Object> config = new HashMap();<br />
         config.put("hs-custom-metadata",map);<br />
 ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
+ 
+ 12）从不同入口进入不同故事线功能。<br />
+通过map.put("anotherWelcomeText","heroText");来启用不同入口进入不同故事线功能。
+> * 参数示例: 
+        <pre>
+  ArrayList<String> tags = new ArrayList();
+        tags.add("pay1");
+        tags.add("s1");
+        tags.add("elvaTestTag");
+	HashMap<String,Object> map = new HashMap();
+        map.put("hs-tags",tags);
+//调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。
+//注：heroText提示语句，需要和故事线中的User Say相对应。
+map.put("anotherWelcomeText","heroText");
+HashMap config = new HashMap();
+config.put("hs-custom-metadata",map);
+//如果是在智能客服主界面中
+ELvaChatServiceSdk.showElvaChatService("elvaTestName","12349303258",1, "","1",config);
+//如果是在智能客服运营主界面中
+ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
+
  
 12) Set the SDK language，call `setSDKLanguage` method(Elva use the language of the phone by default.Call this method if after init ,and after the language of App has changed if nessary.)<br />
 setSDKLanguage (String language);<br />
