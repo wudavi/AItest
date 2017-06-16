@@ -39,9 +39,9 @@ Import play-services-appindexing into your project(IF the item google service ap
 Note: only available on Android Studio or other Gradle -based projects, can be directly modify configuration to increase the introduction of Elva SDK.
  ### Ⅰ. Add the following *allprojects* to your *build.gradle* file inside the project section.
 > allprojects {  <br />
-        repositories {  <br />
+            repositories {  <br />
             jcenter()  <br />
-        }  <br />
+           }  <br />
 
 ### Ⅱ.Add the following dependencies to your *build.gradle* file inside the depencencies section.
 > dependencies {  <br />
@@ -206,7 +206,7 @@ tags.add("pay1");<br />
         config.put("hs-custom-metadata",map);<br />
 ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
  
- 12）different entrance into the different stories. <br />
+12）different entrance into the different stories. <br />
 Use map.put("anotherWelcomeText","heroText");to enable different entrance into the different stories.
 > * Parameter Example:      
         <pre>
@@ -222,7 +222,7 @@ HashMap config = new HashMap();
 config.put("hs-custom-metadata",map);
 
  
-12) Set the SDK language，call `setSDKLanguage` method(Elva use the language of the phone by default.Call this method if after init ,and after the language of App has changed if nessary.)<br />
+13)  Set the SDK language，call `setSDKLanguage` method(Elva use the language of the phone by default.Call this method if after init ,and after the language of App has changed if nessary.)<br />
 setSDKLanguage (String language);<br />
 > * Parameter Description:<br />
 language:language alias,eg:en for english,zh_CN for simplified Chinese.For more alias ,see alias in Elva page "settings"-->"language".<br />
