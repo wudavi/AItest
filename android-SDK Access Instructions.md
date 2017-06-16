@@ -38,7 +38,7 @@ Import play-services-appindexing into your project(IF the item google service ap
 ## Another way
 Note: only available on Android Studio or other Gradle -based projects, can be directly modify configuration to increase the introduction of Elva SDK.
  ### Ⅰ. Add the following *allprojects* to your *build.gradle* file inside the project section.
->  <pre> allprojects {  <br />
+> <pre> allprojects {  <br />
        repositories {  <br />
        jcenter()  <br />
        }  <br />
