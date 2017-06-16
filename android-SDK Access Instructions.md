@@ -23,27 +23,59 @@
   
   
 # Android SDK Access Instructions
-
-## Ⅰ. Download Android SDK.
+## 1，There are two ways to access a budget SDK, one way is imported after download, another way is from jcenter is introduced.
+## one way :
+### Ⅰ. Download Android SDK.
 Click the button "Clone or download" in the top right corner to download Android SDK and then unzip the file.
 
-## Ⅱ. cocos2dx Interface List
-Put ECServiceCocos2dx.h, ECServiceCocos2dx.cpp in the interface folder in your Classes folder.
-## Ⅲ. Import elvachatservice into project
+### Ⅱ. Import elvachatservice into project
 Copy the elvachatservice folder to your main directory
 
-## Ⅳ. Import Google App Indexing into project
+### Ⅲ. Import Google App Indexing into project
 Import play-services-appindexing into your project(IF the item google service appindexing exists, this step can be ignored).
 
-## Ⅴ. Access Project Configuration
-Modify the AndroidManifest.xml in elvachatservice folder to add the required configuration:
 
-### 1. Add the required permissions:
+## another way
+Note: only available on Android Studio or other Gradle -based projects, can be directly modify configuration to increase the introduction of Elva SDK.
+ ### Ⅰ.在Project级别build.gradle中加入：
+allprojects {
+        repositories {
+            jcenter()
+        }
+
+### Ⅱ.在使用Elva的Module级别build.gradle中加入：
+> dependencies {  <br />
+    compile 'net.aihelp:elva:1.0.0'  <br />
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'  <br />
+    compile 'com.android.support:appcompat-v7:23.4.0'  <br />
+    compile 'com.android.support:design:23.4.0'  <br />
+    compile 'com.android.support:recyclerview-v7:23.4.0'  <br />
+    compile 'com.android.support:cardview-v7:23.4.0'  <br />
+}  <br />
+
+ > * 参数说明：  <br />
+dependencies {  <br />
+  //Elva主包,必需  <br />
+    compile 'net.aihelp:elva:1.0.0'  <br />
+  //Elva通信包,必需  <br />
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'  <br />
+  //使用Google AppIndexing 时需要加上  <br />
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'  <br />
+  //以下为使用运营模块 时需要加上  <br />
+    compile 'com.android.support:appcompat-v7:23.4.0'  <br />
+    compile 'com.android.support:design:23.4.0'  <br />
+    compile 'com.android.support:recyclerview-v7:23.4.0'  <br />
+    compile 'com.android.support:cardview-v7:23.4.0'  <br />
+
+
+## 2. Access Project Configuration
+Modify the AndroidManifest.xml in elvachatservice folder to add the required configuration:
+### Ⅰ. Add the required permissions:
     <Uses-permission android: name = "android.permission.INTERNET" />
     <Uses-permission android: name = "android.permission.ACCESS_NETWORK_STATE" />
     <Uses-permission android: name = "android.permission.WRITE_EXTERNAL_STORAGE" />
     <Uses-permission android: name = "android.permission.READ_EXTERNAL_STORAGE" />
-### 2. Add activity:
+### Ⅱ. Add activity:
     <Activity
         Android: name = "com.ljoy.chatbot.ChatMainActivity"
         Android: configChanges = "orientation | screenSize | locale"
@@ -62,12 +94,12 @@ Modify the AndroidManifest.xml in elvachatservice folder to add the required con
                 android:pathPrefix="/elvaFAQ" />
         </intent-filter>
     </ Activity>
-### 3、Add meta
+### Ⅲ、Add meta
       <meta-data
           android:name="com.google.android.gms.version"
           android:value="@integer/google_play_services_version" />
 
-## Ⅵ.Interface Call Instructions
+## 3.Interface Call Instructions
 ### 1. SDK initialization. <br />
 Create a JNI environment and the application in the Activity: (must be called at the beginning of the game)<br />
 <br />
