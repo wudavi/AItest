@@ -206,7 +206,7 @@ tags.add("pay1");<br />
         config.put("hs-custom-metadata",map);<br />
 ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
  
-12）different entrance into the different stories. <br />
+12） different entrance into the different stories. <br />
 Use map.put("anotherWelcomeText","heroText");to enable different entrance into the different stories.
 > * Parameter Example:      
         <pre>
