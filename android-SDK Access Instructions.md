@@ -38,10 +38,10 @@ Import play-services-appindexing into your project(IF the item google service ap
 ## another way
 Note: only available on Android Studio or other Gradle -based projects, can be directly modify configuration to increase the introduction of Elva SDK.
  ### Ⅰ. Add the following *allprojects* to your *build.gradle* file inside the project section.
-allprojects {
-        repositories {
-            jcenter()
-        }
+> allprojects {  <br />
+        repositories {  <br />
+            jcenter()  <br />
+        }  <br />
 
 ### Ⅱ.add the following dependencies to your *build.gradle* file inside the depencencies section.
 > dependencies {  <br />
@@ -206,9 +206,9 @@ tags.add("pay1");<br />
         config.put("hs-custom-metadata",map);<br />
 ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
  
- 12）从不同入口进入不同故事线功能。<br />
-通过map.put("anotherWelcomeText","heroText");来启用不同入口进入不同故事线功能。
-> * 参数示例: 
+ 12）different entrance into the different stories. <br />
+Use map.put("anotherWelcomeText","heroText");to enable different entrance into the different stories.
+> * Parameter Example:      
         <pre>
   ArrayList<String> tags = new ArrayList();
         tags.add("pay1");
@@ -216,15 +216,10 @@ ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<
         tags.add("elvaTestTag");
 	HashMap<String,Object> map = new HashMap();
         map.put("hs-tags",tags);
-//调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。
-//注：heroText提示语句，需要和故事线中的User Say相对应。
+//note："heroText" must be the same with "User Say" in the stories。
 map.put("anotherWelcomeText","heroText");
 HashMap config = new HashMap();
 config.put("hs-custom-metadata",map);
-//如果是在智能客服主界面中
-ELvaChatServiceSdk.showElvaChatService("elvaTestName","12349303258",1, "","1",config);
-//如果是在智能客服运营主界面中
-ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
 
  
 12) Set the SDK language，call `setSDKLanguage` method(Elva use the language of the phone by default.Call this method if after init ,and after the language of App has changed if nessary.)<br />
