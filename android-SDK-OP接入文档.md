@@ -43,10 +43,11 @@
 注：只适用基于Android Studio或其他Gradle based projects 的用户，可以无需下载Elva，直接修改配置增加Elva的引入。
  
  ### 1.在Project级别build.gradle中加入：
-allprojects {
-        repositories {
-            jcenter()
-        }
+>  <pre> allprojects {  <br />
+       repositories {  <br />
+       jcenter()  <br />
+       }  <br />
+       } 
 
 ### 2.在使用Elva的Module级别build.gradle中加入：
 > dependencies {  <br />
