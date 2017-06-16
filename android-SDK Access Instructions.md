@@ -42,6 +42,7 @@ Note: only available on Android Studio or other Gradle -based projects, can be d
             repositories {  <br />
             jcenter()  <br />
            }  <br />
+	   } <br />
 
 ### Ⅱ.Add the following dependencies to your *build.gradle* file inside the depencencies section.
 > dependencies {  <br />
