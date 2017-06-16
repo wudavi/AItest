@@ -35,9 +35,10 @@ Copy the elvachatservice folder to your main directory
 Import play-services-appindexing into your project(IF the item google service appindexing exists, this step can be ignored).
 
 ### Ⅳ.Import Android appcompact into project
-Import Android appcompact from Android_libs into your project(If the item exsit,this step can be ignored).
-If you use Gradle:
-    compile 'com.android.support:appcompat-v7:23.4.0' <br />
+Import Android appcompact from Android_libs into your project(If the item exsit,this step can be ignored). <br />
+If you use Gradle: <br />
+Modify the build. Gradle, and add the following section.
+> compile 'com.android.support:appcompat-v7:23.4.0' <br />
     compile 'com.android.support:design:23.4.0' <br />
     compile 'com.android.support:recyclerview-v7:23.4.0' <br />
     compile 'com.android.support:cardview-v7:23.4.0' <br />
@@ -45,7 +46,7 @@ If you use Gradle:
 ## Another way
 Note: only available on Android Studio or other Gradle -based projects, can be directly modify configuration to increase the introduction of Elva SDK.
  ### Ⅰ. Add the following allprojects to your build.gradle file inside the project section.
->    <pre> allprojects {  <br />
+>  <pre> allprojects {  <br />
        repositories {  <br />
        jcenter()}  <br />
        } 
