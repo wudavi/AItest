@@ -103,15 +103,15 @@ ElvaChatServiceSDKAndroid.getInstance().showElva(string playerName,string player
 
 > * 参数示例:   
 > 
->         Dictionary<string, object> dic = new Dictionary<string, object>();
->         dic.Add("dic1", "aaa");
->         dic.Add("dic2", "bbb");
->         List<string> tags = new List<string>();
->         //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
->         tag.Add("paid");
->         tag.Add("server1");
->         dic.Add("hs-tags", tags);
->         ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic);
+>         Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
+>         dic.Add("dic1", "aaa"); <br />
+>         dic.Add("dic2", "bbb"); <br />
+>         List<string> tags = new List<string>(); <br />
+>         //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。 <br />
+>         tag.Add("paid"); <br />
+>         tag.Add("server1"); <br />
+>         dic.Add("hs-tags", tags); <br />
+>         ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic); <br />
 
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(string faqId,Dictionary\<string,object> config);<br />
@@ -172,24 +172,24 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary\<string,object> config, int defaultTabIndex);
 <br />
 > * 参数说明：<br />
->               playerName:游戏中玩家名称。 <br />
->               playerUid:玩家在游戏里的唯一标示id。 <br />
->               serverId:玩家所在的服务器编号。 <br />
->               playerParseId:空。 <br />
->               showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
->               config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
->               defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
-              
+              playerName:游戏中玩家名称。 <br />
+              playerUid:玩家在游戏里的唯一标示id。 <br />
+              serverId:玩家所在的服务器编号。 <br />
+              playerParseId:空。 <br />
+              showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
+              config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
+              defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
+>               
 > * 参数示例:   
-        Dictionary<string, object> dic = new Dictionary<string, object>();
-        dic.Add("dic1", "aaa");
-        dic.Add("dic2", "bbb");
-        List<string> tags = new List<string>();
-        //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。
-        tag.Add("paid");
-        tag.Add("server1");
-        dic.Add("hs-tags", tags);
-        ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);
+        Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
+        dic.Add("dic1", "aaa"); <br />
+        dic.Add("dic2", "bbb"); <br />
+        List<string> tags = new List<string>(); <br />
+        //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。 <br />
+        tag.Add("paid"); <br />
+        tag.Add("server1"); <br />
+        dic.Add("hs-tags", tags); <br />
+        ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic); <br />
 > 
 12) 设置语言，调用`setSDKLanguage`方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。)<br />
 setSDKLanguage (String language);<br />
