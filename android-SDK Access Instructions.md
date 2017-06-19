@@ -23,7 +23,7 @@
   
   
 # Android SDK Access Instructions
-## 1，There are two ways to access a budget SDK, one way is imported after download, another way is from jcenter is introduced.
+## 1，Here are two ways to access a budget SDK, one way is imported after download, another way is from jcenter is introduced.
 ## One way :
 ### Ⅰ. Download Android SDK.
 Click the button "Clone or download" in the top right corner to download Android SDK and then unzip the file.
