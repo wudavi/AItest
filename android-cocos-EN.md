@@ -27,14 +27,16 @@
 ## One way :
 ### Ⅰ. Download Android SDK.
 Click the button "Clone or download" in the top right corner to download Android SDK and then unzip the file.
+## Ⅱ. cocos2dx Interface List
+Put ECServiceCocos2dx.h, ECServiceCocos2dx.cpp in the interface folder in your Classes folder.
 
-### Ⅱ. Import elvachatservice into project
+### Ⅲ. Import elvachatservice into project
 Copy the elvachatservice folder to your main directory
 
-### Ⅲ. Import Google App Indexing into project
+### Ⅳ. Import Google App Indexing into project
 Import play-services-appindexing into your project(IF the item google service appindexing exists, this step can be ignored).
 
-### Ⅳ.Import Android appcompact into project
+### Ⅴ.Import Android appcompact into project
 Import Android appcompact from Android_libs into your project(If the item exsit,this step can be ignored). <br />
 If you use Gradle: <br />
 Modify the build. Gradle, and add the following section.
@@ -61,6 +63,8 @@ Note: only available on Android Studio or other Gradle -based projects, can be d
     compile 'com.android.support:cardview-v7:23.4.0'  <br />
 }  <br />
 
+### Ⅲ. cocos2dx Interface List
+Put ECServiceCocos2dx.h, ECServiceCocos2dx.cpp in the interface folder in your Classes folder.
 
 ## 2. Access Project Configuration
 Modify the AndroidManifest.xml in elvachatservice folder to add the required configuration:
