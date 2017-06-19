@@ -178,7 +178,7 @@ showElvaOP(string playerName, string playerUid, string serverId, string playerPa
 > showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
 > config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 > defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
-## 
+#### 
 > * 参数示例:   
         Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
         dic.Add("dic1", "aaa"); <br />
