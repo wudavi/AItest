@@ -103,16 +103,16 @@ ElvaChatServiceSDKAndroid.getInstance().showElva(string playerName,string player
 
 > * 参数示例:   
 > 
->         Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
->         dic.Add("dic1", "aaa"); <br />
->         dic.Add("dic2", "bbb"); <br />
->         List<string> tags = new List<string>(); <br />
->         //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。 <br />
->         tag.Add("paid"); <br />
->         tag.Add("server1"); <br />
->         dic.Add("hs-tags", tags); <br />
->         ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic); <br />
-
+        Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
+        dic.Add("dic1", "aaa"); <br />
+        dic.Add("dic2", "bbb"); <br />
+        List<string> tags = new List<string>(); <br />
+        //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。 <br />
+        tag.Add("paid"); <br />
+        tag.Add("server1"); <br />
+        dic.Add("hs-tags", tags); <br />
+        ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic); <br />
+> 
 2) 展示单条FAQ，调用`showSingleFAQ`方法<br />
     showSingleFAQ(string faqId,Dictionary\<string,object> config);<br />
 > * 参数说明：<br />
