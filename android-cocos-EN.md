@@ -202,17 +202,17 @@ config: Optional, custom ValueMap information. You can set specific Tag informat
               defaultTabIndex:Optional，Set the default tab index.（start with 0，if you want to set Elva tab as default，just set it to 999）.<br />	
 <br />
 
-> * Parameter Example:      
-   <pre>ArrayList<String> tags = new ArrayList();<br />
-//Description: the hs - tags corresponding value is an ArrayList, incoming custom Tag here, need in the Web management configuration with the name of the Tag.<br />
-tags.add("pay1");<br />
+> * Parameter Example:      
+>   <pre>ArrayList<String> tags = new ArrayList();<br />
+> //Description: the hs - tags corresponding value is an ArrayList, incoming custom Tag here, need in the Web management configuration with the name of the Tag.<br />
+> tags.add("pay1");<br />
         tags.add("s1");<br />
         tags.add("elvaTestTag");<br />
         HashMap<String,Object> map = new HashMap();<br />
         map.put("hs-tags",tags);<br />
         HashMap<String,Object> config = new HashMap();<br />
-        config.put("hs-custom-metadata",map);<br />
-ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
+        config.put("hs-custom-metadata",map);<br />
+> ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);<br /><pre />
  
 12） different entrance into the different stories. <br />
 Use map.put("anotherWelcomeText","heroText");to enable different entrance into the different stories.
