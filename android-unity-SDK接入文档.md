@@ -169,8 +169,8 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
 
 11) Elva AI 运营模块主界面启动，调用`showElvaOP`方法，启动运营模块界面<br />
 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary\<string,object> config, int defaultTabIndex);
-<br />
-> * 参数说明：<br />
+
+> * 参数说明： 
 > playerName:游戏中玩家名称。 <br />
 > playerUid:玩家在游戏里的唯一标示id。 <br />
 > serverId:玩家所在的服务器编号。 <br />
@@ -178,7 +178,7 @@ showElvaOP(string playerName, string playerUid, string serverId, string playerPa
 > showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。<br />
 > config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 > defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
-             
+             <br />	
 > * 参数示例:   
         Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
         dic.Add("dic1", "aaa"); <br />
