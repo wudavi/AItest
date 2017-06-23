@@ -1,7 +1,6 @@
 # 重点提醒：<br />
 1.一定要进行初始化init操作，不然会无法进入Elva AI系统。<br />
-2.iOS10需要获取权限，具体方法参考下面链接 http://blog.csdn.net/u012681458/article/details/51865435 <br />
-3.<div>
+2.<div>
     <table border="0">
       <tr>
         <th>方法</th>
@@ -25,13 +24,11 @@
 # IOS SDK 接入说明：<br />
 ## 一、下载IOS SDK <br />
 点击上一个页面右上角的“Clone or download”按钮下载IOS SDK，下载完成后解压文件。<br />
-## 二、cocos2dx接口清单 <br />
-把interface文件夹下的ECServiceCocos2dx.h、ECServiceCocos2dx.mm放入您的Classes文件夹。<br />
-## 三、导入ElvaChatService <br />
+## 二、导入ElvaChatService <br />
 导入ElvaChatService的文件到项目中。<br />      
-## 四、接入工程配置 <br />
+## 三、接入工程配置 <br />
 1、Build Settings里面Other Linker Flags 设置值-ObjC，否则会出现：unrecognized selector sent to instance exception<br/>
-## 五、接口调用说明
+## 四、接口调用说明
 ### 1、SDK初始化（必须在游戏开始阶段调用）<br />
 在Cocos2dx中调用：ECServiceCocos2dx::init(string appKey,string domain,string appId)<br />
 * 其中：<br />
