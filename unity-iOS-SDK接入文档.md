@@ -51,6 +51,7 @@ serverId:玩家所在的服务器编号。  <br />
 playerParseId:空。  <br />
 showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。 <br />
 config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br />
+![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-IOS.jpg "showElva")
 
 > •	参数示例:    <br />
 Dictionary<string, object> dic = new Dictionary<string, object>();  <br />
@@ -69,18 +70,22 @@ showSingleFAQ(string faqId,Dictionary<string,object> config); <br />
 faqId:FAQ的PublishID,可以在Elva AI 后台中，从FAQs菜单下找到指定FAQ，查看PublishID。 <br />
 config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。  <br />
 注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。
-	
+![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-IOS.png "showSingleFAQ")
+
 3).	展示相关部分FAQ，调用showFAQSection方法 <br />
 showFAQSection(string sectionPublishId,Dictionary<string,object> config); <br />
 > •	参数说明： <br />
 sectionPublishId:FAQ Section 的PublishID（可以在Elva AI 后台 中，从FAQs菜单下[Section]菜单，查看PublishID） <br />
 config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br />
+![showFAQSection](https://github.com/CS30-NET/Pictures/blob/master/showFAQSection-CN-IOS.jpg "showFAQSection")
 
 4).	展示FAQ列表，调用showFAQs方法 <br />
 showFAQList(Dictionary<string,object> config) <br />
 > •	参数说明： <br />
 showFAQList(Dictionary<string,object> config) <br />
 config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br />
+![showFAQs](https://github.com/CS30-NET/Pictures/blob/master/showFAQs-CN-IOS.jpg "showFAQs")
+
 5).	设置游戏名称信息，调用setName方法(建议游戏刚进入，调用Init之后就默认调用) <br />
 setName(string gameName); <br />
 > •	参数说明:
@@ -106,6 +111,7 @@ showConversation(string uid,string serverId,Dictionary<string,object> config); <
 playerUid:玩家在游戏里的唯一标示id。 <br />
 serverId:玩家所在的服务器编号。 <br />
 config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br />
+![showConversation](https://github.com/CS30-NET/Pictures/blob/master/showConversation-CN-IOS.png "showConversation")
 	
 11).	Elva AI 运营模块主界面启动，调用showElvaOP方法，启动运营模块界面 <br />
 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary<string,object> config, int defaultTabIndex);
