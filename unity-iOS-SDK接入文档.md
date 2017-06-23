@@ -90,11 +90,16 @@ gameName:游戏名称，设置后将显示在SDK中相关界面标题栏。
 > •	参数说明: <br />
 playerUid:玩家唯一ID。 <br />
 
-8.	设置服务器编号信息，调用setServerId方法(使用自助服务必须调用，参见 2)展示单条FAQ) 在showSingleFAQ之前调用：setServerId(string serverId); 
-	•	参数说明: serverId:服务器ID。 
-	9.	设置玩家名称信息，调用setUserName方法(建议游戏刚进入，调用Init之后就默认调用) setUserName(string userName); 
-	•	参数说明: userName:玩家名称。 
-	10.	直接进行vip_chat人工客服聊天，调用showConversation方法(必须确保9）设置玩家名称信息setUserName 已经调用) showConversation(string uid,string serverId,Dictionary<string,object> config); 
+8).	设置服务器编号信息，调用setServerId方法(使用自助服务必须调用，参见 2)展示单条FAQ) <br />
+在showSingleFAQ之前调用：setServerId(string serverId); 
+> •	参数说明:
+serverId:服务器ID。 
+	
+9).	设置玩家名称信息，调用setUserName方法(建议游戏刚进入，调用Init之后就默认调用) <br />
+setUserName(string userName); 
+> •	参数说明: userName:玩家名称。 
+
+10.	直接进行vip_chat人工客服聊天，调用showConversation方法(必须确保9）设置玩家名称信息setUserName 已经调用) showConversation(string uid,string serverId,Dictionary<string,object> config); 
 	•	参数说明: playerUid:玩家在游戏里的唯一标示id。 serverId:玩家所在的服务器编号。 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。 
 	11.	Elva AI 运营模块主界面启动，调用showElvaOP方法，启动运营模块界面 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary<string,object> config, int defaultTabIndex);
 	•	参数说明： playerName:游戏中玩家名称。  playerUid:玩家在游戏里的唯一标示id。  serverId:玩家所在的服务器编号。  playerParseId:空。  showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。 config:自定义ValueMap信息。可以在此处设置特定的Tag信息。 defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。 
