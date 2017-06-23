@@ -69,7 +69,7 @@ showSingleFAQ(string faqId,Dictionary<string,object> config); <br />
 > •	参数说明： <br />
 faqId:FAQ的PublishID,可以在Elva AI 后台中，从FAQs菜单下找到指定FAQ，查看PublishID。 <br />
 config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。  <br />
-注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。
+注：如果在web管理后台配置了FAQ的SelfServiceInterface，并且SDK配置了相关参数，将在显示FAQ的同时，右上角提供功能菜单，可以对相关的自助服务进行调用。 <br />
 ![showSingleFAQ](https://github.com/CS30-NET/Pictures/blob/master/showSingleFAQ-CN-IOS.png "showSingleFAQ")
 
 3).	展示相关部分FAQ，调用showFAQSection方法 <br />
