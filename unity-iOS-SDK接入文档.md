@@ -99,16 +99,38 @@ serverId:服务器ID。 
 setUserName(string userName); 
 > •	参数说明: userName:玩家名称。 
 
-10).	直接进行vip_chat人工客服聊天，调用showConversation方法(必须确保9）设置玩家名称信息setUserName 已经调用) showConversation(string uid,string serverId,Dictionary<string,object> config); 
-	•	参数说明: playerUid:玩家在游戏里的唯一标示id。 serverId:玩家所在的服务器编号。 config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动。 
+10).	直接进行vip_chat人工客服聊天，调用showConversation方法(必须确保9）设置玩家名称信息setUserName 已经调用) <br />
+showConversation(string uid,string serverId,Dictionary<string,object> config); <br />
+> •	参数说明: <br />
+playerUid:玩家在游戏里的唯一标示id。 <br />
+serverId:玩家所在的服务器编号。 <br />
+config:(可选)自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br />
 	
-11).	Elva AI 运营模块主界面启动，调用showElvaOP方法，启动运营模块界面 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary<string,object> config, int defaultTabIndex);
-	•	参数说明： playerName:游戏中玩家名称。  playerUid:玩家在游戏里的唯一标示id。  serverId:玩家所在的服务器编号。  playerParseId:空。  showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。 config:自定义ValueMap信息。可以在此处设置特定的Tag信息。 defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。 
+11).	Elva AI 运营模块主界面启动，调用showElvaOP方法，启动运营模块界面 <br />
+showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary<string,object> config, int defaultTabIndex);
+> •	参数说明：  <br />
+playerName:游戏中玩家名称。  <br />
+playerUid:玩家在游戏里的唯一标示id。 <br />
+serverId:玩家所在的服务器编号。  <br />
+playerParseId:空。  <br />
+showConversationFlag(0或1):是否开启人工入口。此处为1时，将在机器人的聊天界面右上角，提供人工聊天的入口。如下图。 <br />
+config:自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br />
+defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。 <br />
 
-	•	参数示例:   Dictionary<string, object> dic = new Dictionary<string, object>();  dic.Add("dic1", "aaa");  dic.Add("dic2", "bbb");  List tags = new List();  //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。  tag.Add("paid");  tag.Add("server1");  dic.Add("hs-tags", tags);  ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);  
+ > •	参数示例:   Dictionary<string, object> dic = new Dictionary<string, object>();  <br />
+ dic.Add("dic1", "aaa");  <br />
+ dic.Add("dic2", "bbb");  <br />
+ List tags = new List();  <br />
+ //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。  <br />
+ tag.Add("paid");  <br />
+ tag.Add("server1");  <br />
+ dic.Add("hs-tags", tags);  <br />
+ ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);  <br />
 
-12).	设置语言，调用setSDKLanguage方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。) setSDKLanguage (String language); 
-	•	参数说明: language:语言名称。如英语为en,简体中文为zh_CN。更多语言简称参见Elva后台，"设置"-->"语言"的Alias列。
+12).	设置语言，调用setSDKLanguage方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。) <br />
+setSDKLanguage (String language); <br />
+> •	参数说明:
+language:语言名称。如英语为en,简体中文为zh_CN。更多语言简称参见Elva后台，"设置"-->"语言"的Alias列。
 
 
 
