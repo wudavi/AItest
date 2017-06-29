@@ -179,8 +179,7 @@ showElvaOP(string playerName, string playerUid, string serverId, string playerPa
 > config:自定义ValueMap信息。可以在此处设置特定的Tag信息。<br />
 > defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。<br />	
 #### 
-> * 参数示例:   
-        <pre>
+> * 参数示例:   <br />
         Dictionary<string, object> dic = new Dictionary<string, object>(); <br />
         dic.Add("dic1", "aaa"); <br />
         dic.Add("dic2", "bbb"); <br />
