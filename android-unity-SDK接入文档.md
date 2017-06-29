@@ -194,36 +194,21 @@ showElvaOP(string playerName, string playerUid, string serverId, string playerPa
 通过dic.Add("anotherWelcomeText","heroText");来启用不同入口进入不同故事线功能。
 > * 参数示例: 
         <pre>
-        
-Dictionary<string, object> dic = new Dictionary<string, object>(); 
-dic.Add("dic1", "aaa"); 
-dic.Add("dic2", "bbb"); 
-List tags = new List(); 
-//说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。 
-tag.Add("paid"); 
-tag.Add("server1"); 
-dic.Add("hs-tags", tags); 
-dic.Add("anotherWelcomeText","heroText");
-//调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。
-//注：heroText提示语句，需要和故事线中的User Say相对应。
-ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic); 
-
-        
-  ArrayList<String> tags = new ArrayList();
-        tags.add("pay1");
-        tags.add("s1");
-        tags.add("elvaTestTag");
-	HashMap<String,Object> map = new HashMap();
-        map.put("hs-tags",tags);
-//调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。
-//注：heroText提示语句，需要和故事线中的User Say相对应。
-map.put("anotherWelcomeText","heroText");
-HashMap config = new HashMap();
-config.put("hs-custom-metadata",map);
+        Dictionary<string, object> dic = new Dictionary<string, object>();  <br />
+dic.Add("dic1", "aaa");  <br />
+dic.Add("dic2", "bbb");  <br />
+List tags = new List();  <br />
+//说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。  <br />
+tag.Add("paid");  <br />
+tag.Add("server1");  <br />
+dic.Add("hs-tags", tags);  <br />
+//调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。 <br />
+//注：heroText提示语句，需要和故事线中的User Say相对应。 <br />
+dic.Add("anotherWelcomeText","heroText"); <br />
 //如果是在智能客服主界面中
-ELvaChatServiceSdk.showElvaChatService("elvaTestName","12349303258",1, "","1",config);
+ElvaChatServiceSDKAndroid.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic);  <br />
 //如果是在智能客服运营主界面中
-ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
+ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic); <br />
 
 
 
