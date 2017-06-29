@@ -141,18 +141,18 @@ defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需�
 
  > * 参数示例:<br />
     <pre>
- Dictionary<string, object> dic = new Dictionary<string, object>();  
- dic.Add("dic1", "aaa");  
- dic.Add("dic2", "bbb");  
- List tags = new List();  
+ Dictionary<string, object> dic = new Dictionary<string, object>();    <br />
+ dic.Add("dic1", "aaa");    <br />
+ dic.Add("dic2", "bbb");    <br />
+ List tags = new List();    <br />
  //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。  <br />
- tag.Add("paid");  
- tag.Add("server1");  
- dic.Add("hs-tags", tags);  
-//调用不同故事线功能，需要使用指定的提示语句，调出相应的机器人欢迎语。
-//注：使用的'公告'提示语句，需要和故事线中的User Say内容保持一致。
- dic.Add("anotherWelcomeText","公告");
-//如果是在智能客服运营主界面中
+ tag.Add("paid");    <br />
+ tag.Add("server1");    <br />
+ dic.Add("hs-tags", tags);    <br />
+//调用不同故事线功能，需要使用指定的提示语句，调出相应的机器人欢迎语。  <br />
+//注：使用的'公告'提示语句，需要和故事线中的User Say内容保持一致。  <br />
+ dic.Add("anotherWelcomeText","公告");  <br />
+//如果是在智能客服运营主界面中  <br />
 ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);  <br />
 //如果是在智能客主界面中
 ElvaChatServiceSDKiOS.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic);  <br />    
