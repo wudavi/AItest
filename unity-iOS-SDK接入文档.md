@@ -125,7 +125,8 @@ config:自定义ValueMap信息。可以在此处设置特定的Tag信息。 <br 
 defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需默认打开Elva，可设置为999）。 <br />
 ![showElva](https://github.com/CS30-NET/Pictures/blob/master/showElva-CN-IOS.jpg "showElva")
 
- > •	参数示例:   Dictionary<string, object> dic = new Dictionary<string, object>();  <br />
+ > •	参数示例:     <br />
+ Dictionary<string, object> dic = new Dictionary<string, object>();  <br />
  dic.Add("dic1", "aaa");  <br />
  dic.Add("dic2", "bbb");  <br />
  List tags = new List();  <br />
@@ -135,7 +136,31 @@ defaultTabIndex:可选，设置默认打开的Tab页index（从0开始，如需�
  dic.Add("hs-tags", tags);  <br />
  ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);  <br />
 
-12).	设置语言，调用setSDKLanguage方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。) <br />
+12）从不同入口进入不同故事线功能。<br />
+通过添加（ anotherWelcomeText='公告' ）来启用不同入口进入不同故事线功能。
+
+ > * 参数示例:<br />
+    <pre>
+ Dictionary<string, object> dic = new Dictionary<string, object>();  <br />
+ dic.Add("dic1", "aaa");  <br />
+ dic.Add("dic2", "bbb");  <br />
+ List tags = new List();  <br />
+ //说明：hs-tags对应的值为List类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。  <br />
+ tag.Add("paid");  <br />
+ tag.Add("server1");  <br />
+ dic.Add("hs-tags", tags);  <br />
+//调用不同故事线功能，需要使用指定的提示语句，调出相应的机器人欢迎语。
+//注：使用的'公告'提示语句，需要和故事线中的User Say内容保持一致。
+ dic.Add("anotherWelcomeText","公告");
+//如果是在智能客服运营主界面中
+ElvaChatServiceSDKAndroid.getInstance().showElvaOP("elvaTestName","12349303258",1, "","1",dic);  <br />
+//如果是在智能客主界面中
+ElvaChatServiceSDKiOS.getInstance().showElva("elvaTestName","12349303258",1, "","1",dic);  <br />    
+    
+
+
+
+13).	设置语言，调用setSDKLanguage方法(Elva默认使用手机语言适配，如需修改，可在初始化之后调用，并在切换App语言后再次调用。) <br />
 setSDKLanguage (String language); <br />
 > •	参数说明:
 language:语言名称。如英语为en,简体中文为zh_CN。更多语言简称参见Elva后台，"设置"-->"语言"的Alias列。
