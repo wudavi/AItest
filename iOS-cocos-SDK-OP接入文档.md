@@ -138,3 +138,43 @@ config : (可选)自定义ValueMap信息。可以在此处设置特定的Tag信�
       }
     );
     </pre>
+
+
+12）从不同入口进入不同故事线功能。<br />
+通过map.put("anotherWelcomeText","heroText");来启用不同入口进入不同故事线功能。
+
+ > * 参数示例:<br />
+    <pre>
+    //如果是在智能客服运营主界面中
+    ECServiceCocos2dx:: showElvaOP ("elvaTestName","12349303258",1,"","1",
+      { 
+        hs-custom-metadata＝｛
+        // (说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。)
+        hs-tags＝'军队，充值' 
+        anotherWelcomeText='公告'
+
+        VersionCode＝'3'
+        ｝
+      }
+    );
+    </pre>
+
+
+
+> * 参数示例: 
+        <pre>
+  ArrayList<String> tags = new ArrayList();
+        tags.add("pay1");
+        tags.add("s1");
+        tags.add("elvaTestTag");
+	HashMap<String,Object> map = new HashMap();
+        map.put("hs-tags",tags);
+//调用不同故事线功能，使用指定的提示语句，调出相应的机器人欢迎语。
+//注：heroText提示语句，需要和故事线中的User Say相对应。
+map.put("anotherWelcomeText","heroText");
+HashMap config = new HashMap();
+config.put("hs-custom-metadata",map);
+//如果是在智能客服主界面中
+ELvaChatServiceSdk.showElvaChatService("elvaTestName","12349303258",1, "","1",config);
+//如果是在智能客服运营主界面中
+ELvaChatServiceSdk.showElvaOP("elvaTestName","12349303258",1, "","1",config,0);
