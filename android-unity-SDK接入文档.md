@@ -169,7 +169,8 @@ config:可选，自定义ValueMap信息。参照 1)智能客服主界面启动�
 11) Elva AI 运营模块主界面启动，调用`showElvaOP`方法，启动运营模块界面<br />
 showElvaOP(string playerName, string playerUid, string serverId, string playerParseId, string showConversationFlag, Dictionary\<string,object> config, int defaultTabIndex);
 
-> * 参数说明： 
+> * 参数说明：
+        <pre>
 > playerName:游戏中玩家名称。 <br />
 > playerUid:玩家在游戏里的唯一标示id。 <br />
 > serverId:玩家所在的服务器编号。 <br />
