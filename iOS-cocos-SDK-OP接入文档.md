@@ -153,7 +153,7 @@ config : (可选)自定义ValueMap信息。可以在此处设置特定的Tag信�
         hs-custom-metadata＝｛
         // (说明：hs-tags对应的值为vector类型，此处传入自定义的Tag，需要在Web管理配置同名称的Tag才能生效。)
         hs-tags＝'军队，充值' 
-        anotherWelcomeText='公告'
+anotherWelcomeText='公告'
 	//调用不同故事线功能，需要使用指定的提示语句，调出相应的机器人欢迎语。
 	//注：使用的'公告'提示语句，需要和故事线中的User Say相对应。
         VersionCode＝'3'
